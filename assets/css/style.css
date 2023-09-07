@@ -1,6 +1,23 @@
+/* Importation des FONTS */
+@font-face {
+  /* Creation d'un raccourci */
+  font-family: "playfairDR";
+  src: url(../font/PlayfairDisplay-Regular.ttf);
+}
+/* Reset marge à 0 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "playfairDR", serif;
+}
+/* body{ 
+  margin: 0;
+} */
 /* Pour appeler l'id Logo, j'utilise id# et son nom logo */
 #logo {
   color: red;
+  padding: 1rem;
+  letter-spacing: 0.3rem;
 }
 /* Pour apeller un ou plusieurs élement HTML dans un selecteur j'utilise son nom */
 nav {
@@ -8,6 +25,16 @@ nav {
   /* Pour gérer l'alignement vertical des enfants de ma nav j'utilise ma nav align-items */
   align-items: center;
   justify-content: space-between;
+  box-shadow: 10px 13px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 13px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 13px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #ffffffda;
+  /* Le z-index ne fonctionne aps avec une position statique (position par defaut) */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 55px;
+  top: 0;
 }
 ul {
   display: flex;
@@ -19,14 +46,75 @@ li{
 } */
 li {
   padding: 16px;
+  letter-spacing: 5px;
 }
-#img-header{
-    background-image: url("../img/hamburger.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
+#img-header {
+  background-image: url("../img/hamburger.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
 }
+#about {
+  display: flex;
+  justify-content: space-between;
+}
+/* Pour appeler des elements enfants ( et eux uniquement) à l'intérieur d'un parent j'apelle en premier le parent puis un espace puis un espace puis ses enfants. exemple: #about div{} */
+#about div {
+  border: 1px red solid;
+  width: 46%;
+  margin: 2rem auto
+}
+img, input {
+  width: 100%;
+}
+#about span{
+  color: red;
+  background-color: rgba(7, 7, 7, 0.13);
+}
+#about h2{
+  margin: 2rem 1rem;
+  text-align: center;
+}
+#about h3 {
+text-align: center;
+margin: 2rem auto 1rem;
+}
+#Menu{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#Menu div {
+  border: 1px red solid;
+  width: 46%;
+  margin: 2rem auto
+}
+#Menu h2{
+  margin: 2rem 1rem;
+  text-align: center;
+}
+#Menu h3 {
+margin: 2rem auto 1rem;
+}
+/* #about img[alt="tablettesetting2"]{
 
+} */
+#contact{
+  width: 70%;
+  margin: auto;
+}
+#contact input{
+  border: none;
+  border-bottom: 0.5px solid grey;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+#contact .send{
+  width: fit-content;
+}
 
 
